@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AfriGulf | Bridging Africa and the GCC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Swiper CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Tailwind (assumed already included) -->
+
+    <!-- SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Font Awesome 4 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      @keyframes pulseIcon {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+      .animate-pulse-icon {
+        animation: pulseIcon 1.5s infinite;
+      }
+    </style>
+  </head>
+  <body class="bg-[#f9fcee] text-gray-900 font-sans">
+
+    <!-- Navigation Bar -->
+     <header class="bg-white shadow-sm py-4 px-6">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <!-- Mobile Hamburger (now on the left) -->
+    <button id="navbar-toggle" class="md:hidden flex items-center px-3 py-2 border rounded text-gray-800 border-gray-400 focus:outline-none mr-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="/images/AfriGulf.png" alt="Irhas Logo" class="w-20 h-15" />
+    </div>
+
+    <!-- Nav Menu -->
+    <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-800" id="navbar-menu">
+      <div class="relative group">
+        <button class="flex items-center gap-1 hover:text-emerald-600">
+          Home
+        </button>
+        <!-- Dropdown if needed -->
+      </div>
+      <a href="#" class="hover:text-emerald-600">Service</a>
+      <a href="#" class="hover:text-emerald-600">Projects</a>
+      <div class="relative group">
+        <button class="flex items-center gap-1 hover:text-emerald-600">
+          About
+          <svg class="w-3 h-3 transform group-hover:rotate-180 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M5.25 7.75L10 12.5l4.75-4.75" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          </svg>
+        </button>
+      </div>
+      <a href="#" class="hover:text-emerald-600">Blog</a>
+      <a href="#" class="hover:text-emerald-600">Contact</a>
+    </nav>
+
+    <!-- Contact + CTA (desktop only) -->
+    <div class="hidden md:flex items-center space-x-4">
+      <a href="#" class="bg-emerald-50 text-emerald-600 px-5 py-2 rounded-full font-semibold text-sm hover:bg-emerald-100 transition">
+        Get Started
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu (hidden by default) -->
+    <nav id="mobile-menu" class="fixed inset-0 z-50 bg-black bg-opacity-60 hidden md:hidden">
+      <div class="bg-white w-64 h-full shadow-lg p-6 relative flex flex-col">
+        <button id="mobile-menu-close" class="absolute top-4 right-4 text-gray-800 text-2xl focus:outline-none">
+          &times;
+        </button>
+        <div class="mb-8 flex items-center space-x-2">
+          <img src="/images/AfriGulf.png" alt="Irhas Logo" class="w-20 h-15" />
+        </div>
+        <a href="#" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">Home</a>
+        <a href="#" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">Service</a>
+        <a href="#" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">Projects</a>
+        <a href="#" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">About</a>
+        <a href="#" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">Blog</a>
+        <a href="#" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">Contact</a>
+        <a href="#" class="mt-6 bg-emerald-50 text-emerald-600 px-5 py-2 rounded-full font-semibold text-sm hover:bg-emerald-100 transition text-center">Get Started</a>
+      </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center px-6 py-12">
+      <div class="grid md:grid-cols-2 gap-10 items-center max-w-7xl mx-auto">
+        <div>
+          <span class="inline-block bg-lime-200 text-black font-semibold px-3 py-1 rounded mb-4">
+            Welcome to AfriGulf
+          </span>
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            Bridging Africa<br />
+            and the GCC
+          </h1>
+          <p class="text-gray-700 mb-6 max-w-md">
+            AfriGulf connects opportunities, cultures, and economies between Africa and Qatar through business, tourism, and innovation.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="#contact" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition">
+              Get Started
+            </a>
+            <a href="#" class="flex items-center gap-2 group transition-transform hover:translate-x-1">
+              <div class="bg-lime-200 p-3 rounded-full animate-pulse-icon">
+                <svg class="w-4 h-4 fill-black" viewBox="0 0 20 20">
+                  <path d="M6 4l10 6-10 6z" />
+                </svg>
+              </div>
+              <span class="text-sm group-hover:underline">Watch Our Demo Video</span>
+            </a>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <img src="./images/hero1.png" alt="AfriGulf Hero" class="w-full max-w-md md:max-w-lg" />
+        </div>
+      </div>
+    </section>
+
+   <!-- About Section -->
+<section class="px-6 py-16 bg-white text-gray-900">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <!-- Left Content -->
+    <div>
+      <span class="inline-flex items-center gap-2 text-sm text-lime-600 font-semibold mb-2">
+        <span class="w-2 h-2 bg-lime-400 rounded-full"></span>
+        Get To Know About Us
+      </span>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+        We Are Here to Give You<br />
+        Effective Ideas
+      </h2>
+      <p class="text-gray-600 mb-6">
+        Creative design slogans can help people connect more to the scenario that the accounts for making available.
+        <img src="./images/about3.png" alt="Team" class="w-16 h-16 rounded-md object-cover" />
+        <div>
+          <p class="font-semibold">We Are The Best Digital Agencies In The City</p>
+          <a href="#about" class="inline-block mt-2 bg-black text-white px-5 py-2 rounded hover:bg-gray-800 transition text-sm">
+            Learn More →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Image Grid -->
+    <div class="relative">
+      <div class="grid grid-cols-2 gap-4">
+        <!-- Top images with equal height -->
+        <img src="./images/about4.png" alt="Img2" class="rounded-lg w-full h-40 object-cover" />
+        <img src="./images/about1.png" alt="Img1" class="rounded-lg w-full h-40 object-cover" />
+        <!-- Bottom wide image -->
+        <img src="./images/about2.png" alt="Img3" class="rounded-lg w-full h-48 object-cover col-span-2" />
+      </div>
+
+      <!-- Experience Badge -->
+      <div class="absolute bottom-40 left-1/2 transform -translate-x-1/2 bg-lime-400 text-white font-bold text-center px-6 py-6 rounded-full w-32 h-32 flex flex-col items-center justify-center shadow-xl text-sm">
+        <span class="text-2xl">15+</span>
+        <span>Years Of</span>
+        <span>Experiences</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED SERVICES -->
+ <!-- Services Section -->
+<section class="bg-[#111111] text-white px-6 py-20">
+  <div class="max-w-7xl mx-auto text-center">
+    <p class="text-lime-400 text-sm font-semibold mb-2">Featured Services</p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-10">What We Offer For You</h2>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
+      <!-- Reusable service card -->
+      <div class="group border border-gray-700 p-6 rounded-lg bg-[#111111] hover:bg-lime-400 hover:text-black transition-colors duration-500">
+        <div class="mb-4 transform transition-transform duration-500 group-hover:scale-110 text-blue-500 group-hover:text-blue-700">
+          <!-- Icon: Graduation Cap -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 14l9-5-9-5-9 5 9 5zm0 0v5m0-5l-9-5m9 5l9-5" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Corporate Training</h3>
+        <p class="text-sm">Tailored workshops in policy, digital innovation, and creative industries to foster leadership and growth.</p>
+      </div>
+
+      <div class="group border border-gray-700 p-6 rounded-lg bg-[#111111] hover:bg-lime-400 hover:text-black transition-colors duration-500">
+        <div class="mb-4 transform transition-transform duration-500 group-hover:scale-110 text-red-400 group-hover:text-red-600">
+          <!-- Icon: Globe -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 2a10 10 0 100 20 10 10 0 000-20z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Tourism Development</h3>
+        <p class="text-sm">Cultural heritage and student tours promoting cross-cultural exchange and sustainability.</p>
+      </div>
+
+      <div class="group border border-gray-700 p-6 rounded-lg bg-[#111111] hover:bg-lime-400 hover:text-black transition-colors duration-500">
+        <div class="mb-4 transform transition-transform duration-500 group-hover:scale-110 text-yellow-400 group-hover:text-yellow-600">
+          <!-- Icon: Briefcase -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 7h18M16 3H8v4h8V3zM3 7v13h18V7" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Business Facilitation</h3>
+        <p class="text-sm">Support for African entrepreneurs with GCC market access, trade missions, incubation, and partnerships.</p>
+      </div>
+
+      <div class="group border border-gray-700 p-6 rounded-lg bg-[#111111] hover:bg-lime-400 hover:text-black transition-colors duration-500">
+        <div class="mb-4 transform transition-transform duration-500 group-hover:scale-110 text-teal-400 group-hover:text-teal-700">
+          <!-- Icon: School -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 12l8-4 8 4M4 12l8 4 8-4M4 12v6h16v-6" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Student Tourism</h3>
+        <p class="text-sm">Transformative learning journeys connecting African and GCC youth through education and culture.</p>
+      </div>
+
+      <div class="group border border-gray-700 p-6 rounded-lg bg-[#111111] hover:bg-lime-400 hover:text-black transition-colors duration-500">
+        <div class="mb-4 transform transition-transform duration-500 group-hover:scale-110 text-pink-400 group-hover:text-pink-700">
+          <!-- Icon: Trophy -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 4h8v4h-8V4zM5 8h14a7 7 0 01-7 7 7 7 0 01-7-7zM12 15v5" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Sports Tourism</h3>
+        <p class="text-sm">Access to Qatar’s world-class sports events and cultural excursions built around thrilling matches.</p>
+      </div>
+
+      <div class="group border border-gray-700 p-6 rounded-lg bg-[#111111] hover:bg-lime-400 hover:text-black transition-colors duration-500">
+        <div class="mb-4 transform transition-transform duration-500 group-hover:scale-110 text-purple-400 group-hover:text-purple-700">
+          <!-- Icon: Calendar -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 2v4M8 2v4M3 10h18" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Events Management</h3>
+        <p class="text-sm">From planning to promotion — we execute unforgettable corporate, cultural, and sports events in Qatar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- OUR WORKS USE CASES -->
+ <section class="bg-white py-16 px-6">
+  <div class="max-w-7xl mx-auto">
+    <!-- Title -->
+    <div class="text-center mb-10">
+      <p class="text-lime-600 text-sm font-semibold">Cases Studies</p>
+      <h2 class="text-3xl md:text-4xl font-bold">Some Of Our Recent Works</h2>
+    </div>
+
+    <!-- Swiper -->
+    <div class="relative">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide -->
+          <div class="swiper-slide group relative overflow-hidden rounded-md">
+            <img src="./images/sliders (1).png" class="w-full h-80 object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-4">
+              <div class="text-white text-sm">
+                <p>Marketing</p>
+                <h3 class="text-lime-400 font-semibold">Digital Marketing Growth</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide group relative overflow-hidden rounded-md">
+            <img src="./images/sliders (2).png" class="w-full h-80 object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-4">
+              <div class="text-white text-sm">
+                <p>UI/UX</p>
+                <h3 class="text-lime-400 font-semibold">App Wireframes</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide group relative overflow-hidden rounded-md">
+            <img src="./images/sliders (3).png" class="w-full h-80 object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-4">
+              <div class="text-white text-sm">
+                <p>Consulting</p>
+                <h3 class="text-lime-400 font-semibold">Client Strategy</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide group relative overflow-hidden rounded-md">
+            <img src="./images/sliders (4).png" class="w-full h-80 object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-4">
+              <div class="text-white text-sm">
+                <p>Analytics</p>
+                <h3 class="text-lime-400 font-semibold">Market Boost</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="swiper-pagination mt-8 !static text-center"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CALL TO ACTION -->
+ <section class="relative bg-cover bg-center bg-no-repeat" style="background-image: url('./images/cta-img.png');">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 items-center">
+    <!-- Left Text -->
+    <div>
+      <span class="inline-block bg-lime-400 text-black text-sm font-semibold px-3 py-1 rounded mb-4">
+        Get To Know About Us
+      </span>
+      <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+        Let’s Get To Work<br />
+        Together Ready To Work Us
+      </h2>
+    </div>
+
+    <!-- Right Button -->
+    <div class="flex md:justify-end mt-8 md:mt-0">
+      <a
+        href="#contact"
+        class="inline-block bg-lime-400 text-black text-lg font-semibold px-8 py-4 rounded shadow hover:bg-lime-300 transition"
+      >
+        Get Started →
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- HOW IT WORKS SECTION -->
+ <section class="bg-[#111111] text-white py-20 px-6 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto text-center">
+    <!-- Section Heading -->
+    <p class="text-lime-400 text-sm font-semibold mb-2">Our Working Process</p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-12">How Does We Work?</h2>
+
+    <!-- Steps Grid -->
+    <div class="grid md:grid-cols-3 gap-10 relative z-10">
+      <!-- Step 1 -->
+      <div class="flex flex-col items-center text-center relative">
+        <div class="relative mb-4">
+          <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <span class="absolute -top-2 -right-2 bg-lime-400 text-black text-xs font-bold px-2 py-1 rounded-full">01</span>
+        </div>
+        <p class="text-lime-400 text-sm font-semibold mb-1">FIRST STEP</p>
+        <h3 class="text-xl font-bold mb-2">Problem Analysis</h3>
+        <p class="text-gray-400 text-sm max-w-xs">
+          All trials are our Pro plan by default you can try out all features.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flex flex-col items-center text-center relative">
+        <div class="relative mb-4">
+          <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 20v-6m0 0a4 4 0 10-4-4m4 4a4 4 0 014-4" />
+            </svg>
+          </div>
+          <span class="absolute -top-2 -right-2 bg-lime-400 text-black text-xs font-bold px-2 py-1 rounded-full">02</span>
+        </div>
+        <p class="text-lime-400 text-sm font-semibold mb-1">SECOND STEP</p>
+        <h3 class="text-xl font-bold mb-2">Find Solutions</h3>
+        <p class="text-gray-400 text-sm max-w-xs">
+          All trials are our Pro plan by default you can try out all features.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flex flex-col items-center text-center relative">
+        <div class="relative mb-4">
+          <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M3 10l9-6 9 6-9 6-9-6z" />
+              <path d="M12 16v6" />
+            </svg>
+          </div>
+          <span class="absolute -top-2 -right-2 bg-lime-400 text-black text-xs font-bold px-2 py-1 rounded-full">03</span>
+        </div>
+        <p class="text-lime-400 text-sm font-semibold mb-1">THIRD STEP</p>
+        <h3 class="text-xl font-bold mb-2">Build and Develop</h3>
+        <p class="text-gray-400 text-sm max-w-xs">
+          All trials are our Pro plan by default you can try out all features.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional Decorations -->
+  <img src="./images/working-process__shape2.png" class="absolute left-10 top-10 w-10 opacity-30" alt="decoration" />
+  <img src="./images/working-process__shape5.png" class="absolute right-10 top-10 w-10 opacity-30" alt="decoration" />
+</section>
+
+
+<!-- BLOGPOST CONTENTS -->
+ <section class="bg-white py-20 px-6">
+  <div class="max-w-7xl mx-auto text-center">
+    <!-- Heading -->
+    <p class="text-lime-600 text-sm font-semibold mb-2">Blog & Article</p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-12">Read Our Latest Airticle</h2>
+
+    <!-- Blog Grid -->
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Blog Post -->
+      <div class="bg-white shadow-lg rounded-md overflow-hidden group transition duration-300 hover:bg-lime-400">
+        <img src="./images/blog1.png" alt="Blog 1" class="w-full h-72 object-cover" />
+        <div class="px-6 py-4">
+          <div class="flex items-center text-xs font-medium mb-2 gap-4 text-gray-600 group-hover:text-black">
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8" />
+                <path d="M21 8v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8" />
+              </svg>
+              Sep 30, 2022
+            </span>
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" stroke="#000" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              5 Min Read
+            </span>
+          </div>
+          <h3 class="text-lg font-bold text-black group-hover:text-black">Designing The Next-Level Websites</h3>
+          <a href="#" class="mt-2 inline-block text-sm font-semibold group-hover:text-black">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="bg-white shadow-lg rounded-md overflow-hidden group transition duration-300 hover:bg-lime-400">
+        <img src="./images/blog2.jpg" alt="Blog 2" class="w-full h-72 object-cover" />
+        <div class="px-6 py-4">
+          <div class="flex items-center text-xs font-medium mb-2 gap-4 text-gray-600 group-hover:text-black">
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8" />
+                <path d="M21 8v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8" />
+              </svg>
+              Sep 30, 2022
+            </span>
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" stroke="#000" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              5 Min Read
+            </span>
+          </div>
+          <h3 class="text-lg font-bold text-black group-hover:text-black">Best Agencies Are Choose Their Clients Wisely</h3>
+          <a href="#" class="mt-2 inline-block text-sm font-semibold group-hover:text-black">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="bg-white shadow-lg rounded-md overflow-hidden group transition duration-300 hover:bg-lime-400">
+        <img src="./images/blog3.jpg" alt="Blog 3" class="w-full h-72 object-cover" />
+        <div class="px-6 py-4">
+          <div class="flex items-center text-xs font-medium mb-2 gap-4 text-gray-600 group-hover:text-black">
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8" />
+                <path d="M21 8v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8" />
+              </svg>
+              Sep 30, 2022
+            </span>
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" stroke="#000" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              5 Min Read
+            </span>
+          </div>
+          <h3 class="text-lg font-bold text-black group-hover:text-black">It is Your Time to Show Your Creativity</h3>
+          <a href="#" class="mt-2 inline-block text-sm font-semibold group-hover:text-black">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TESTIMONIALS -->
+ <section class="py-20 bg-white px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="swiper testimonialSwiper relative">
+      <div class="swiper-wrapper">
+        <!-- Slide -->
+        <div class="swiper-slide flex flex-col md:flex-row items-center gap-12">
+          <!-- Left Avatar Stack -->
+          <div class="flex flex-col justify-center gap-8 relative">
+            <img src="./images/feedback (1).png" alt="avatar-top"
+              class="w-24 h-32 object-cover rounded-[40%] shadow-lg border-4 border-white" />
+            <img src="./images/feedback (2).png" alt="avatar-bottom"
+              class="w-24 h-24 object-cover rounded-full shadow-lg border-4 border-white" />
+          </div>
+
+          <!-- Main Image -->
+          <div class="flex-shrink-0">
+            <img src="./images/feedback.png" alt="main client"
+              class="w-60 h-60 object-cover rounded-full border-4 border-white shadow-xl" />
+          </div>
+
+          <!-- Testimonial Content -->
+          <div class="flex-1 max-w-xl">
+            <span class="inline-block bg-lime-300 text-black text-sm font-semibold px-3 py-1 rounded mb-4">
+              Customers Feedback
+            </span>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-snug">
+              What Says Our Client’s<br />
+              About Diligent
+            </h2>
+            <p class="text-gray-600 mb-6 leading-relaxed text-base">
+              “ Concor delivers sectors concor delivers world class infrastructure the is a world class infrastructure
+              solutions across a broad industry start and end of creativity to customers and the stakeholders across
+              the world broad ... ”
+            </p>
+            <div>
+              <h4 class="text-lg font-bold text-black">Alina Kolaminov</h4>
+              <p class="text-sm text-gray-500">Marketing Agent</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more testimonial slides here if needed -->
+      </div>
+
+      <!-- Navigation -->
+      <div class="absolute right-4 top-1/2 transform -translate-y-1/2 space-y-4 z-10">
+        <div class="testimonial-prev w-10 h-10 bg-black text-white rounded-full flex items-center justify-center"></div>
+        <div class="testimonial-next w-10 h-10 bg-black text-white rounded-full flex items-center justify-center"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PARTNERS -->
+ <section class="bg-white py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-px border border-gray-200 bg-gray-200">
+      <!-- Row 1 -->
+      <div class="bg-white flex items-center justify-center p-6">
+        <img src="./images/logoipsum-343.png" alt="Luminous" class="grayscale opacity-60" />
+      </div>
+      <div class="bg-white flex items-center justify-center p-6">
+        <img src="./images/logoipsum-343.png" alt="Twitch" class="grayscale opacity-60" />
+      </div>
+      <div class="bg-white flex items-center justify-center p-6">
+        <img src="./images/logoipsum-343.png" alt="ProNature" class="grayscale opacity-60" />
+      </div>
+      <div class="bg-white flex items-center justify-center p-6">
+        <img src="./images/logoipsum-343.png" alt="Waveless" class="grayscale opacity-60" />
+      </div>
+
+      <!-- Row 2 -->
+      <div class="bg-white flex items-center justify-center p-6">
+        <img src="./images/logoipsum-343.png" alt="Flowbase" class="grayscale opacity-60" />
+      </div>
+      <div class="bg-white flex items-center justify-center p-6">
+        <img src="./images/logoipsum-343.png" alt="Sitemark" class="grayscale opacity-60" />
+      </div>
+      <div class="bg-white flex items-center justify-center p-6">
+        <img src="./images/logoipsum-343.png" alt="Xfinity" class="grayscale opacity-60" />
+      </div>
+      <div class="bg-white flex items-center justify-center p-6">
+        <img src="./images/logoipsum-343.png" alt="Astro" class="grayscale opacity-60" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- FOOTER -->
+ <footer class="bg-lime-300 text-black pt-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <!-- Quote Bar -->
+    <div class="md:flex justify-between items-center bg-black text-white px-8 py-6 rounded-t-md">
+      <div class="mb-4 md:mb-0">
+        <h3 class="text-xl font-bold">Get Free Quote</h3>
+        <p class="text-sm text-gray-300">Best solutions for your company</p>
+      </div>
+      <form class="flex w-full md:w-auto mt-4 md:mt-0">
+        <input type="email" placeholder="Email Address"
+          class="px-4 py-2 text-sm rounded-l-md w-full md:w-64 text-black outline-none" />
+        <button class="bg-lime-300 text-black font-semibold px-4 py-2 rounded-r-md hover:bg-lime-200">
+          Get A Quote
+        </button>
+      </form>
+    </div>
+
+    <!-- Footer Content Grid -->
+    <div class="grid md:grid-cols-5 gap-8 py-12 text-sm">
+      <!-- Logo & Contact -->
+      <div>
+        <img src="./images/Logo.png" alt="Logo" class="mb-4 w-20" />
+        <p class="mb-2">Need any support? or have any project on your mind?</p>
+        <div class="flex items-center gap-2 mb-1">
+          <i class="fa fa-map-marker w-4 h-4"></i>
+          <span>First floor, Office No. 102, Building 69, B-Ring Road, Doha, Qatar</span>
+        </div>
+        <div class="flex items-center gap-2 mb-1">
+          <i class="fa fa-envelope w-4 h-4"></i>
+          <span>info@afri-gulf.com</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa fa-phone w-4 h-4"></i>
+          <span>(+974) 3003 5911</span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">Need a career?</a></li>
+          <li><a href="#" class="hover:underline">About Us</a></li>
+          <li><a href="#" class="hover:underline">Our Services</a></li>
+          <li><a href="#" class="hover:underline">Latest News</a></li>
+          <li><a href="#" class="hover:underline">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="font-bold mb-4">Our Services</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">Front End Development</a></li>
+          <li><a href="#" class="hover:underline">UI/UX Development</a></li>
+          <li><a href="#" class="hover:underline">Web Development</a></li>
+          <li><a href="#" class="hover:underline">Web Design Strategy</a></li>
+          <li><a href="#" class="hover:underline">Digital Marketing</a></li>
+        </ul>
+      </div>
+
+      <!-- Latest News -->
+      <div class="md:col-span-2">
+        <h4 class="font-bold mb-4">Latest News</h4>
+        <div class="space-y-4">
+          <div class="flex gap-4">
+            <img src="./images/blog2.jpg" alt="News" class="w-14 h-14 object-cover rounded" />
+            <div>
+              <h5 class="font-semibold text-sm leading-tight mb-1">
+                Believed in The Strength of the Creativeness.
+              </h5>
+              <div class="text-xs text-gray-700 flex items-center gap-2">
+                <span class="flex items-center gap-1">
+                  <i class="fa fa-calendar w-4 h-4"></i>
+                  28 Nov, 2022
+                </span>
+                <span class="flex items-center gap-1">
+                  <i class="fa fa-clock-o w-4 h-4"></i>
+                  4 Min Read
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <img src="./images/blog3.jpg" alt="News" class="w-14 h-14 object-cover rounded" />
+            <div>
+              <h5 class="font-semibold text-sm leading-tight mb-1">
+                Believed in The Strength of the Creativeness.
+              </h5>
+              <div class="text-xs text-gray-700 flex items-center gap-2">
+                <span class="flex items-center gap-1">
+                  <i class="fa fa-calendar w-4 h-4"></i>
+                  28 Nov, 2022
+                </span>
+                <span class="flex items-center gap-1">
+                  <i class="fa fa-clock-o w-4 h-4"></i>
+                  4 Min Read
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+  <script>
+    const testimonialSwiper = new Swiper(".testimonialSwiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".testimonial-next",
+      prevEl: ".testimonial-prev",
+    },
+  });
+
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1.2,
+      },
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+  // Mobile menu toggle (robust, after HTML, with querySelector)
+    document.addEventListener('DOMContentLoaded', function () {
+      var navbarToggle = document.querySelector('#navbar-toggle');
+      var mobileMenu = document.querySelector('#mobile-menu');
+      var mobileMenuClose = document.querySelector('#mobile-menu-close');
+
+      if (navbarToggle && mobileMenu && mobileMenuClose) {
+        navbarToggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          mobileMenu.classList.remove('hidden');
+        });
+        mobileMenuClose.addEventListener('click', function (e) {
+          e.preventDefault();
+          mobileMenu.classList.add('hidden');
+        });
+        mobileMenu.addEventListener('click', function (e) {
+          if (e.target === mobileMenu) {
+            mobileMenu.classList.add('hidden');
+          }
+        });
+      }
+    });
+    </script>
+</html>
