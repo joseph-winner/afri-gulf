@@ -30,7 +30,15 @@
       .animate-pulse-icon {
         animation: pulseIcon 1.5s infinite;
       }
+
+      @media (max-width: 768px) {
+  .avatar-stack {
+    flex-direction: row; /* Change stack to row on smaller screens */
+    gap: 4px;
+  }
+}
     </style>
+    
   </head>
   <body class="bg-[#f9fcee] text-gray-900 font-sans">
 
@@ -513,56 +521,62 @@
 
 <!-- TESTIMONIALS -->
  <section class="py-20 bg-white px-6">
-  <div class="max-w-7xl mx-auto">
-    <div class="swiper testimonialSwiper relative">
-      <div class="swiper-wrapper">
-        <!-- Slide -->
-        <div class="swiper-slide flex flex-col md:flex-row items-center gap-12">
-          <!-- Left Avatar Stack -->
-          <div class="flex flex-col justify-center gap-8 relative">
-            <img src="./images/feedback (1).png" alt="avatar-top"
-              class="w-24 h-32 object-cover rounded-[40%] shadow-lg border-4 border-white" />
-            <img src="./images/feedback (2).png" alt="avatar-bottom"
-              class="w-24 h-24 object-cover rounded-full shadow-lg border-4 border-white" />
-          </div>
-
-          <!-- Main Image -->
-          <div class="flex-shrink-0">
-            <img src="./images/feedback.png" alt="main client"
-              class="w-60 h-60 object-cover rounded-full border-4 border-white shadow-xl" />
-          </div>
-
-          <!-- Testimonial Content -->
-          <div class="flex-1 max-w-xl">
-            <span class="inline-block bg-lime-300 text-black text-sm font-semibold px-3 py-1 rounded mb-4">
-              Customers Feedback
-            </span>
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-snug">
-              What Says Our Client’s<br />
-              About Diligent
-            </h2>
-            <p class="text-gray-600 mb-6 leading-relaxed text-base">
-              “ Concor delivers sectors concor delivers world class infrastructure the is a world class infrastructure
-              solutions across a broad industry start and end of creativity to customers and the stakeholders across
-              the world broad ... ”
-            </p>
-            <div>
-              <h4 class="text-lg font-bold text-black">Alina Kolaminov</h4>
-              <p class="text-sm text-gray-500">Marketing Agent</p>
-            </div>
-          </div>
+ <div class="max-w-7xl mx-auto">
+  <div class="swiper testimonialSwiper relative">
+    <div class="swiper-wrapper">
+      <!-- Slide -->
+      <div class="swiper-slide flex flex-col md:flex-row items-center gap-12">
+        
+       <div class="flex-shrink-0 flex items-center justify-center gap-6">
+         <!-- Left Avatar Stack -->
+        <div class="flex flex-col justify-center gap-4">
+          <img src="./images/feedback (1).png" alt="avatar-top"
+            class="w-24 h-40 object-cover rounded-[40%] shadow-lg border-4 border-white" />
+          <img src="./images/feedback (2).png" alt="avatar-bottom"
+            class="w-24 h-40 object-cover rounded-[40%] shadow-lg border-4 border-white" />
         </div>
 
-        <!-- Add more testimonial slides here if needed -->
+        <!-- Main Image -->
+        <div class="flex-shrink-0">
+          <img src="./images/feedback.png" alt="main client"
+            class="w-60 h-80 object-cover rounded-[40%] border-4 border-white shadow-xl" />
+        </div>
+       </div>
+
+        <!-- Testimonial Content -->
+        <div class="flex-1 max-w-xl text-center md:text-left">
+          <span class="inline-block bg-lime-300 text-black text-sm font-semibold px-3 py-1 rounded mb-4">
+            Customers Feedback
+          </span>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-snug">
+            What Says Our Client’s<br />
+            About Diligent
+          </h2>
+          <p class="text-gray-600 mb-6 leading-relaxed text-base">
+            “ Concor delivers world-class infrastructure solutions across a broad industry, from the start to the end of creativity, serving customers and stakeholders worldwide... ”
+          </p>
+          <div>
+            <h4 class="text-lg font-bold text-black">Alina Kolaminov</h4>
+            <p class="text-sm text-gray-500">Marketing Agent</p>
+          </div>
+        </div>
       </div>
 
-      <!-- Navigation -->
-      <div class="absolute right-4 top-1/2 transform -translate-y-1/2 space-y-4 z-10">
-        <div class="testimonial-prev w-10 h-10 bg-black text-white rounded-full flex items-center justify-center"></div>
-        <div class="testimonial-next w-10 h-10 bg-black text-white rounded-full flex items-center justify-center"></div>
+      <!-- Add more testimonial slides here if needed -->
+    </div>
+
+    <!-- Navigation -->
+    <div class="absolute right-4 top-1/2 transform -translate-y-1/2 space-y-4 z-10">
+      <div class="testimonial-prev w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
+        <i class="fa fa-chevron-left"></i>
+      </div>
+      <div class="testimonial-next w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
+        <i class="fa fa-chevron-right"></i>
       </div>
     </div>
   </div>
+</div>
+
 </section>
 
 
@@ -772,5 +786,5 @@
       }
     });
     </script>
-    
+
 </html>
