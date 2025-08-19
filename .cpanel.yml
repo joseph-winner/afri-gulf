@@ -1,0 +1,20 @@
+
+---
+deployment:
+	tasks:
+		# Set deploy path (replace YOUR_CPANEL_USERNAME with actual cPanel username)
+		- export DEPLOYPATH=/home/africoss/public_html/
+		# Ensure target directory exists
+		- /bin/mkdir -p $DEPLOYPATH
+		# Copy root site files
+		- /bin/cp -f index.html $DEPLOYPATH
+		# Copy images directory recursively
+		- /bin/cp -R images $DEPLOYPATH
+		# (Optional) Clean out any old files not in repo (commented out by default)
+		# - /bin/find $DEPLOYPATH -type f -not -name 'index.html' -not -path "$DEPLOYPATH/images/*" -delete
+
+		# (Optional) Touch a deployment marker file with timestamp
+		- /usr/bin/date > $DEPLOYPATH.last_deploy
+
+		# Done
+
