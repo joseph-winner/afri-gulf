@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AfriGulf | Our Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      @keyframes pulseIcon {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+      }
+      .animate-pulse-icon { animation: pulseIcon 1.5s infinite; }
+    </style>
+  </head>
+  <body class="bg-[#f9fcee] text-gray-900 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-4 px-6">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <button id="navbar-toggle" class="md:hidden flex items-center px-3 py-2 border rounded text-gray-800 border-gray-400 focus:outline-none mr-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <div class="flex items-center space-x-2">
+            <a href="/">
+                <img src="./images/AfriGulf.png" alt="AfriGulf Logo" class="w-20 h-15" />
+            </a>
+        </div>
+        <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-800" id="navbar-menu">
+          <a href="index.html" class="hover:text-emerald-600">Home</a>
+          <a href="services.html" class="hover:text-emerald-600 text-emerald-600 font-bold">Service</a>
+          <a href="about.html" class="hover:text-emerald-600">About</a>
+          <a href="contact.html" class="hover:text-emerald-600">Contact</a>
+        </nav>
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="contact.html" class="bg-emerald-50 text-emerald-600 px-5 py-2 rounded-full font-semibold text-sm hover:bg-emerald-100 transition">Get Started</a>
+        </div>
+      </div>
+    </header>
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="fixed inset-0 z-50 bg-black bg-opacity-60 hidden md:hidden">
+      <div class="bg-white w-64 h-full shadow-lg p-6 relative flex flex-col">
+        <button id="mobile-menu-close" class="absolute top-4 right-4 text-gray-800 text-2xl focus:outline-none">&times;</button>
+        <div class="mb-8 flex items-center space-x-2">
+          <img src="./images/AfriGulf.png" alt="AfriGulf Logo" class="w-20 h-15" />
+        </div>
+        <a href="index.html" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">Home</a>
+        <a href="services.html" class="py-2 px-2 rounded hover:bg-lime-100 text-emerald-600 font-bold">Service</a>
+        <a href="about.html" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">About</a>
+        <a href="contact.html" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">Contact</a>
+        <a href="contact.html" class="mt-6 bg-emerald-50 text-emerald-600 px-5 py-2 rounded-full font-semibold text-sm hover:bg-emerald-100 transition text-center">Get Started</a>
+      </div>
+    </nav>
+    <!-- Services Hero -->
+    <section class="min-h-[60vh] flex items-center px-6 py-16 bg-gradient-to-r from-lime-100 to-emerald-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block bg-lime-200 text-black font-semibold px-3 py-1 rounded mb-4">Our Services</span>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">What We Offer</h1>
+        <p class="text-gray-700 mb-6 max-w-2xl mx-auto">Discover how AfriGulf bridges Africa and the GCC through innovative solutions in training, tourism, business facilitation, and more. Explore our tailored services designed to empower organizations, entrepreneurs, and communities.</p>
+        <a href="#services-list" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition">Explore Services</a>
+      </div>
+    </section>
+    <!-- Services List -->
+    <section id="services-list" class="bg-[#111111] text-white px-6 py-20">
+      <div class="max-w-7xl mx-auto text-center">
+        <p class="text-lime-400 text-sm font-semibold mb-2">Featured Services</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-10">Our Expertise</h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
+          <!-- Service Card 1 -->
+          <div class="group border border-gray-700 p-8 rounded-lg bg-[#111111] hover:bg-lime-400 hover:text-black transition-colors duration-500 shadow-lg">
+            <div class="mb-4 text-blue-500 group-hover:text-blue-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 14l9-5-9-5-9 5 9 5zm0 0v5m0-5l-9-5m9 5l9-5" /></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Corporate Training</h3>
+            <p class="text-sm">Tailored programs to enhance skills in policy, digital innovation, and creative industries. Empowering organizations to lead and innovate.</p>
+          </div>
+          <!-- Service Card 2 -->
+          <div class="group border border-gray-700 p-8 rounded-lg bg-[#111111] hover:bg-lime-400 hover:text-black transition-colors duration-500 shadow-lg">
+            <div class="mb-4 text-red-400 group-hover:text-red-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 2a10 10 0 100 20 10 10 0 000-20z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" /></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Tourism Development</h3>
+            <p class="text-sm">Immersive experiences from heritage tours to student programs, promoting sustainable tourism and cross-cultural exchange.</p>
+          </div>
+          <!-- Service Card 3 -->
+          <div class="group border border-gray-700 p-8 rounded-lg bg-[#111111] hover:bg-lime-400 hover:text-black transition-colors duration-500 shadow-lg">
+            <div class="mb-4 text-yellow-400 group-hover:text-yellow-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 7h18M16 3H8v4h8V3zM3 7v13h18V7" /></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Business Facilitation</h3>
+            <p class="text-sm">Connecting entrepreneurs with GCC markets, supporting market entry, partnerships, and investment opportunities.</p>
+          </div>
+          <!-- Service Card 4 -->
+          <div class="group border border-gray-700 p-8 rounded-lg bg-[#111111] hover:bg-lime-400 hover:text-black transition-colors duration-500 shadow-lg">
+            <div class="mb-4 text-teal-400 group-hover:text-teal-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 12l8-4 8 4M4 12l8 4 8-4M4 12v6h16v-6" /></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Student Tourism</h3>
+            <p class="text-sm">Transformative educational and cultural experiences for youth, inspiring the next generation through immersive learning.</p>
+          </div>
+          <!-- Service Card 5 -->
+          <div class="group border border-gray-700 p-8 rounded-lg bg-[#111111] hover:bg-lime-400 hover:text-black transition-colors duration-500 shadow-lg">
+            <div class="mb-4 text-pink-400 group-hover:text-pink-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 4h8v4h-8V4zM5 8h14a7 7 0 01-7 7 7 7 0 01-7-7zM12 15v5" /></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Sports Tourism</h3>
+            <p class="text-sm">Thrilling sports experiences, connecting visitors to world-class events and fostering sports-driven cultural exchange.</p>
+          </div>
+          <!-- Service Card 6 -->
+          <div class="group border border-gray-700 p-8 rounded-lg bg-[#111111] hover:bg-lime-400 hover:text-black transition-colors duration-500 shadow-lg">
+            <div class="mb-4 text-purple-400 group-hover:text-purple-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 2v4M8 2v4M3 10h18" /></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Events Management</h3>
+            <p class="text-sm">Expert planning and execution for corporate, cultural, and sporting events, ensuring seamless and memorable experiences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact CTA -->
+    <section class="bg-[#f1f1f1] text-black py-16 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-4">Let’s Get In Touch.</h2>
+        <p class="text-gray-900 mb-4">Reach out to learn more about our services or to discuss partnership opportunities. We’re here to help you connect Africa and the GCC.</p>
+        <p class="text-gray-900 mb-10">Or just reach out manually at <a href="mailto:info@afri-gulf.com" class="text-lime-500 hover:underline">info@afri-gulf.com</a></p>
+      </div>
+      <form class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-900 mb-1">First Name</label>
+          <input type="text" placeholder="Enter your first name..." class="w-full px-4 py-2 rounded-md text-black border border-gray-300 focus:ring-lime-300 focus:outline-none" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-900 mb-1">Last Name</label>
+          <input type="text" placeholder="Enter your last name..." class="w-full px-4 py-2 rounded-md text-black border border-gray-300 focus:ring-lime-300 focus:outline-none" />
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium text-gray-900 mb-1">Email Address</label>
+          <input type="email" placeholder="Enter your email address..." class="w-full px-4 py-2 rounded-md text-black border border-gray-300 focus:ring-lime-300 focus:outline-none" />
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium text-gray-900 mb-1">Phone Number</label>
+          <input type="tel" placeholder="+256 (000) 000-000" class="w-full px-4 py-2 rounded-md text-black border border-gray-300 focus:ring-lime-300 focus:outline-none" />
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium text-gray-900 mb-1">Message</label>
+          <textarea placeholder="Enter your message..." maxlength="300" rows="5" class="w-full px-4 py-2 rounded-md text-black border border-gray-300 focus:ring-lime-300 focus:outline-none"></textarea>
+          <p class="text-right text-xs text-gray-400 mt-1">Max 300 characters</p>
+        </div>
+        <div class="md:col-span-2 text-center">
+          <button type="submit" class="bg-lime-300 text-black font-semibold px-8 py-3 rounded-md hover:bg-lime-200 transition duration-200">Submit Form →</button>
+        </div>
+      </form>
+    </section>
+    <!-- FOOTER -->
+ <footer class="bg-gray-900 text-white pt-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <!-- Quote Bar -->
+    <div class="flex flex-col md:flex-row md:justify-between md:items-center bg-black text-white px-8 py-8 rounded-t-md text-center md:text-left">
+      <div class="mb-6 md:mb-0">
+        <h3 class="text-2xl font-bold">Get Free Quote</h3>
+        <p class="text-sm text-gray-300">Best solutions for your company</p>
+      </div>
+      <form class="flex w-full md:w-auto justify-center md:justify-end mt-2 md:mt-0">
+        <input type="email" placeholder="Email Address"
+          class="px-4 py-2 text-sm rounded-l-md w-full md:w-64 text-black outline-none" />
+        <button class="bg-lime-300 text-black font-semibold px-4 py-2 rounded-r-md hover:bg-lime-200">
+          Get A Quote
+        </button>
+      </form>
+    </div>
+
+    <!-- Footer Content Grid -->
+    <div class="grid md:grid-cols-5 gap-10 py-14 text-sm text-center justify-items-center">
+      <!-- Logo & Contact -->
+      <div class="flex flex-col items-center">
+        <img src="./images/afrigulf-.png" alt="Logo" class="mb-4 w-20 mx-auto md:mx-0" />
+        <p class="mb-2 max-w-xs md:max-w-none">Need any support? or have any project on your mind?</p>
+        <div class="flex items-center gap-2 mb-1 justify-center">
+          <i class="fa fa-map-marker w-4 h-4 mt-1"></i>
+          <span>First floor, Office No. 102, Building 69, B-Ring Road, Doha, Qatar</span>
+        </div>
+        <div class="flex items-center gap-2 mb-1 justify-center">
+          <i class="fa fa-envelope w-4 h-4"></i>
+          <span>info@afri-gulf.com</span>
+        </div>
+        <div class="flex items-center gap-2 justify-center">
+          <i class="fa fa-phone w-4 h-4"></i>
+          <span>(+974) 3003 5911</span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="flex flex-col items-center">
+						<h4 class="font-bold mb-4">Quick Links</h4>
+						<ul class="space-y-2">
+							<li><a href="index.html" class="hover:underline">Home</a></li>
+							<li><a href="services.html" class="hover:underline">Service</a></li>
+							<li><a href="about.html" class="hover:underline">About</a></li>
+							<li><a href="contact.html" class="hover:underline">Contact</a></li>
+						</ul>
+					</div>
+
+      <!-- Services -->
+      <div class="flex flex-col items-center">
+        <h4 class="font-bold mb-4">Our Services</h4>
+        <ul class="space-y-2">
+          <li>Corporate Training</li>
+          <li>Tourism Development</li>
+          <li>Business Facilitation</li>
+							<li>Student Tourism</li>
+							<li>Sports Tourism</li>
+							<li>Events Management</li>
+						</ul>
+					</div>
+
+      <!-- Latest News -->
+      <div class="md:col-span-2 flex flex-col items-center">
+						<h4 class="font-bold mb-4">Latest News</h4>
+						<div class="space-y-4 max-w-md md:max-w-none">
+							<p class="text-gray-400">Updates & insights coming soon.</p>
+						</div>
+					</div>
+    </div>
+  </div>
+</footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var navbarToggle = document.querySelector('#navbar-toggle');
+        var mobileMenu = document.querySelector('#mobile-menu');
+        var mobileMenuClose = document.querySelector('#mobile-menu-close');
+        if (navbarToggle && mobileMenu && mobileMenuClose) {
+          navbarToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            mobileMenu.classList.remove('hidden');
+          });
+          mobileMenuClose.addEventListener('click', function (e) {
+            e.preventDefault();
+            mobileMenu.classList.add('hidden');
+          });
+          mobileMenu.addEventListener('click', function (e) {
+            if (e.target === mobileMenu) {
+              mobileMenu.classList.add('hidden');
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

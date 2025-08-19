@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AfriGulf | Contact Us</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<style>
+			@keyframes pulseIcon {0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+			.animate-pulse-icon{animation:pulseIcon 1.5s infinite}
+			.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease}
+			.faq-item.open .faq-answer{max-height:300px}
+		</style>
+	</head>
+	<body class="bg-[#f9fcee] text-gray-900 font-sans">
+		 <!-- Header -->
+    <header class="bg-white shadow-sm py-4 px-6">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <button id="navbar-toggle" class="md:hidden flex items-center px-3 py-2 border rounded text-gray-800 border-gray-400 focus:outline-none mr-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <div class="flex items-center space-x-2">
+            <a href="/">
+                <img src="./images/AfriGulf.png" alt="AfriGulf Logo" class="w-20 h-15" />
+            </a>
+        </div>
+        <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-800" id="navbar-menu">
+          <a href="index.html" class="hover:text-emerald-600">Home</a>
+          <a href="services.html" class="hover:text-emerald-600">Service</a>
+          <a href="about.html" class="hover:text-emerald-600">About</a>
+          <a href="contact.html" class="hover:text-emerald-600 text-emerald-600 font-bold">Contact</a>
+        </nav>
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="contact.html" class="bg-emerald-50 text-emerald-600 px-5 py-2 rounded-full font-semibold text-sm hover:bg-emerald-100 transition">Get Started</a>
+        </div>
+      </div>
+    </header>
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="fixed inset-0 z-50 bg-black bg-opacity-60 hidden md:hidden">
+      <div class="bg-white w-64 h-full shadow-lg p-6 relative flex flex-col">
+        <button id="mobile-menu-close" class="absolute top-4 right-4 text-gray-800 text-2xl focus:outline-none">&times;</button>
+        <div class="mb-8 flex items-center space-x-2">
+          <img src="./images/AfriGulf.png" alt="AfriGulf Logo" class="w-20 h-15" />
+        </div>
+        <a href="index.html" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">Home</a>
+        <a href="services.html" class="py-2 px-2 rounded hover:bg-lime-100 text-emerald-600 font-bold">Service</a>
+        <a href="about.html" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">About</a>
+        <a href="contact.html" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">Contact</a>
+        <a href="contact.html" class="mt-6 bg-emerald-50 text-emerald-600 px-5 py-2 rounded-full font-semibold text-sm hover:bg-emerald-100 transition text-center">Get Started</a>
+      </div>
+    </nav>
+		<!-- Hero -->
+		<section class="relative overflow-hidden bg-gradient-to-r from-lime-100 via-emerald-50 to-white px-6 py-24">
+			<div class="max-w-5xl mx-auto text-center relative z-10">
+				<span class="inline-block bg-lime-200 text-black font-semibold px-3 py-1 rounded mb-4 text-xs">Contact Us</span>
+				<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">We'd Love To Hear From You</h1>
+				<p class="text-gray-700 max-w-2xl mx-auto">Whether you're exploring collaboration, seeking advisory support, or curious about our programs, the AfriGulf team is ready to assist.</p>
+				<div class="mt-8 flex flex-wrap gap-4 justify-center">
+					<a href="#contact-form" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition text-sm">Send a Message</a>
+					<a href="#faq" class="flex items-center gap-2 group text-sm font-medium">
+                        <div class="bg-lime-200 p-3 rounded-full animate-pulse-icon">
+                <svg class="w-4 h-4 fill-black" viewBox="0 0 20 20">
+                  <path d="M6 4l10 6-10 6z" />
+                </svg>
+              </div>
+                        <span class="group-hover:underline">FAQs</span></a>
+				</div>
+			</div>
+			<div class="absolute inset-0 opacity-40 pointer-events-none" style="background-image:radial-gradient(circle at 30% 30%,#bef264,transparent 60%);"></div>
+		</section>
+		<!-- Contact Info Grid -->
+		<section class="px-6 py-20 bg-white">
+			<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+				<div class="p-8 rounded-xl border border-lime-200 bg-lime-50/50 hover:shadow-lg transition">
+					<div class="w-12 h-12 flex items-center justify-center bg-lime-300 rounded-full mb-4 text-black"><i class="fa fa-envelope"></i></div>
+					<h3 class="font-semibold mb-2">Email</h3>
+					<p class="text-sm text-gray-700 mb-2">General & Partnerships</p>
+					<a href="mailto:info@afri-gulf.com" class="text-emerald-600 text-sm font-medium hover:underline">info@afri-gulf.com</a>
+				</div>
+				<div class="p-8 rounded-xl border border-emerald-200 bg-emerald-50/50 hover:shadow-lg transition">
+					<div class="w-12 h-12 flex items-center justify-center bg-emerald-300 rounded-full mb-4 text-black"><i class="fa fa-phone"></i></div>
+					<h3 class="font-semibold mb-2">Phone / WhatsApp</h3>
+					<p class="text-sm text-gray-700 mb-2">Mon - Fri (09:00 - 17:00)</p>
+					<p class="text-sm font-medium">+974 0000 0000</p>
+				</div>
+				<div class="p-8 rounded-xl border border-gray-200 bg-gray-50 hover:shadow-lg transition">
+					<div class="w-12 h-12 flex items-center justify-center bg-gray-200 rounded-full mb-4 text-black"><i class="fa fa-map-marker"></i></div>
+					<h3 class="font-semibold mb-2">Location</h3>
+					<p class="text-sm text-gray-700">Doha, Qatar<br/>Regional Collaboration Hub</p>
+				</div>
+			</div>
+		</section>
+		<!-- Map / Placeholder -->
+		<section class="px-6 pb-20 -mt-8">
+			<div class="max-w-6xl mx-auto">
+				<div class="rounded-2xl overflow-hidden border border-gray-200 h-80 relative bg-gray-100 flex items-center justify-center text-gray-500 text-sm">
+					<span>Map integration coming soon (Google Maps / Leaflet)</span>
+				</div>
+			</div>
+		</section>
+		<!-- Contact Form -->
+		<section id="contact-form" class="bg-[#f1f1f1] text-black py-20 px-6">
+			<div class="max-w-4xl mx-auto text-center mb-12">
+				<h2 class="text-3xl md:text-4xl font-bold mb-4">Send Us A Message</h2>
+				<p class="text-gray-800 max-w-2xl mx-auto text-sm">Fill out the form and our team will respond promptly. We value purposeful collaboration and strategic dialogue.</p>
+			</div>
+			<form class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-8 rounded-xl shadow border border-gray-200">
+				<div>
+					<label class="block text-xs font-semibold tracking-wide text-gray-700 mb-1">First Name</label>
+					<input required type="text" placeholder="Jane" class="w-full px-4 py-2 rounded-md text-black border border-gray-300 focus:ring-2 focus:ring-lime-300 focus:outline-none" />
+				</div>
+				<div>
+					<label class="block text-xs font-semibold tracking-wide text-gray-700 mb-1">Last Name</label>
+					<input required type="text" placeholder="Doe" class="w-full px-4 py-2 rounded-md text-black border border-gray-300 focus:ring-2 focus:ring-lime-300 focus:outline-none" />
+				</div>
+				<div class="md:col-span-2">
+					<label class="block text-xs font-semibold tracking-wide text-gray-700 mb-1">Email Address</label>
+					<input required type="email" placeholder="you@example.com" class="w-full px-4 py-2 rounded-md text-black border border-gray-300 focus:ring-2 focus:ring-lime-300 focus:outline-none" />
+				</div>
+				<div class="md:col-span-2">
+					<label class="block text-xs font-semibold tracking-wide text-gray-700 mb-1">Subject</label>
+					<input type="text" placeholder="How can we help?" class="w-full px-4 py-2 rounded-md text-black border border-gray-300 focus:ring-2 focus:ring-lime-300 focus:outline-none" />
+				</div>
+				<div class="md:col-span-2">
+					<label class="block text-xs font-semibold tracking-wide text-gray-700 mb-1">Message</label>
+					<textarea required placeholder="Enter your message..." maxlength="600" rows="6" class="w-full px-4 py-2 rounded-md text-black border border-gray-300 focus:ring-2 focus:ring-lime-300 focus:outline-none"></textarea>
+					<p class="text-right text-[10px] text-gray-400 mt-1">Max 600 characters</p>
+				</div>
+				<div class="md:col-span-2 flex items-center justify-between flex-wrap gap-4">
+					<label class="flex items-center gap-2 text-xs text-gray-700"><input type="checkbox" class="accent-lime-500" /> <span>I agree to the processing of my data.</span></label>
+					<button type="submit" class="bg-lime-300 text-black font-semibold px-8 py-3 rounded-md hover:bg-lime-200 transition text-sm">Send Message →</button>
+				</div>
+			</form>
+		</section>
+		<!-- FAQ -->
+		<section id="faq" class="px-6 py-20 bg-white">
+			<div class="max-w-5xl mx-auto">
+				<div class="text-center mb-12">
+					<p class="text-lime-600 text-sm font-semibold mb-2">FAQ</p>
+					<h2 class="text-3xl font-bold">Common Questions</h2>
+					<p class="text-gray-600 text-sm mt-3">Quick answers about our services and collaboration process.</p>
+				</div>
+				<div class="space-y-4">
+					<div class="faq-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden">
+						<button class="w-full flex justify-between items-center text-left px-5 py-4 font-medium toggle-faq">What sectors do you focus on?<span class="faq-icon text-gray-500">+</span></button>
+						<div class="faq-answer px-5 pb-4 text-sm text-gray-600">We work across education, tourism, entrepreneurship, innovation, and cultural exchange verticals aligned with sustainable development goals.</div>
+					</div>
+					<div class="faq-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden">
+						<button class="w-full flex justify-between items-center text-left px-5 py-4 font-medium toggle-faq">Do you support startup market entry?<span class="faq-icon text-gray-500">+</span></button>
+						<div class="faq-answer px-5 pb-4 text-sm text-gray-600">Yes. We provide strategic advisory, partnership access, ecosystem mapping, and mission facilitation between Africa & GCC markets.</div>
+					</div>
+					<div class="faq-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden">
+						<button class="w-full flex justify-between items-center text-left px-5 py-4 font-medium toggle-faq">How soon will I get a response?<span class="faq-icon text-gray-500">+</span></button>
+						<div class="faq-answer px-5 pb-4 text-sm text-gray-600">We aim to respond within 2 business days. Priority inquiries may be addressed sooner.</div>
+					</div>
+					<div class="faq-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden">
+						<button class="w-full flex justify-between items-center text-left px-5 py-4 font-medium toggle-faq">Do you offer custom programs?<span class="faq-icon text-gray-500">+</span></button>
+						<div class="faq-answer px-5 pb-4 text-sm text-gray-600">Absolutely. We co-design bespoke training, exchange, and facilitation frameworks tailored to stakeholder needs.</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- FOOTER -->
+ <footer class="bg-gray-900 text-white pt-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <!-- Quote Bar -->
+    <div class="flex flex-col md:flex-row md:justify-between md:items-center bg-black text-white px-8 py-8 rounded-t-md text-center md:text-left">
+      <div class="mb-6 md:mb-0">
+        <h3 class="text-2xl font-bold">Get Free Quote</h3>
+        <p class="text-sm text-gray-300">Best solutions for your company</p>
+      </div>
+      <form class="flex w-full md:w-auto justify-center md:justify-end mt-2 md:mt-0">
+        <input type="email" placeholder="Email Address"
+          class="px-4 py-2 text-sm rounded-l-md w-full md:w-64 text-black outline-none" />
+        <button class="bg-lime-300 text-black font-semibold px-4 py-2 rounded-r-md hover:bg-lime-200">
+          Get A Quote
+        </button>
+      </form>
+    </div>
+
+    <!-- Footer Content Grid -->
+    <div class="grid md:grid-cols-5 gap-10 py-14 text-sm text-center justify-items-center">
+      <!-- Logo & Contact -->
+      <div class="flex flex-col items-center">
+        <img src="./images/afrigulf-.png" alt="Logo" class="mb-4 w-20 mx-auto md:mx-0" />
+        <p class="mb-2 max-w-xs md:max-w-none">Need any support? or have any project on your mind?</p>
+        <div class="flex items-center gap-2 mb-1 justify-center">
+          <i class="fa fa-map-marker w-4 h-4 mt-1"></i>
+          <span>First floor, Office No. 102, Building 69, B-Ring Road, Doha, Qatar</span>
+        </div>
+        <div class="flex items-center gap-2 mb-1 justify-center">
+          <i class="fa fa-envelope w-4 h-4"></i>
+          <span>info@afri-gulf.com</span>
+        </div>
+        <div class="flex items-center gap-2 justify-center">
+          <i class="fa fa-phone w-4 h-4"></i>
+          <span>(+974) 3003 5911</span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="flex flex-col items-center">
+						<h4 class="font-bold mb-4">Quick Links</h4>
+						<ul class="space-y-2">
+							<li><a href="index.html" class="hover:underline">Home</a></li>
+							<li><a href="services.html" class="hover:underline">Service</a></li>
+							<li><a href="about.html" class="hover:underline">About</a></li>
+							<li><a href="contact.html" class="hover:underline">Contact</a></li>
+						</ul>
+					</div>
+
+      <!-- Services -->
+      <div class="flex flex-col items-center">
+        <h4 class="font-bold mb-4">Our Services</h4>
+        <ul class="space-y-2">
+          <li>Corporate Training</li>
+          <li>Tourism Development</li>
+          <li>Business Facilitation</li>
+							<li>Student Tourism</li>
+							<li>Sports Tourism</li>
+							<li>Events Management</li>
+						</ul>
+					</div>
+
+      <!-- Latest News -->
+      <div class="md:col-span-2 flex flex-col items-center">
+						<h4 class="font-bold mb-4">Latest News</h4>
+						<div class="space-y-4 max-w-md md:max-w-none">
+							<p class="text-gray-400">Updates & insights coming soon.</p>
+						</div>
+					</div>
+    </div>
+  </div>
+</footer>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				var navbarToggle = document.querySelector('#navbar-toggle');
+				var mobileMenu = document.querySelector('#mobile-menu');
+				var mobileMenuClose = document.querySelector('#mobile-menu-close');
+				if (navbarToggle && mobileMenu && mobileMenuClose) {
+					navbarToggle.addEventListener('click', function (e) { e.preventDefault(); mobileMenu.classList.remove('hidden'); });
+					mobileMenuClose.addEventListener('click', function (e) { e.preventDefault(); mobileMenu.classList.add('hidden'); });
+					mobileMenu.addEventListener('click', function (e) { if (e.target === mobileMenu) mobileMenu.classList.add('hidden'); });
+				}
+				document.querySelectorAll('.toggle-faq').forEach(function(btn){
+					btn.addEventListener('click', function(){
+						var item = btn.closest('.faq-item');
+						var open = item.classList.contains('open');
+						document.querySelectorAll('.faq-item.open').forEach(i=>{if(i!==item){i.classList.remove('open'); i.querySelector('.faq-icon').textContent='+';}});
+						if(!open){item.classList.add('open'); btn.querySelector('.faq-icon').textContent='-';}
+						else {item.classList.remove('open'); btn.querySelector('.faq-icon').textContent='+';}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

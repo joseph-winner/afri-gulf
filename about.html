@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AfriGulf | About Us</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<style>
+			@keyframes pulseIcon { 0%,100%{transform:scale(1)}50%{transform:scale(1.2)} }
+			.animate-pulse-icon{animation:pulseIcon 1.5s infinite}
+			.prose-list li{position:relative;padding-left:1.25rem}
+			.prose-list li:before{content:"";position:absolute;top:.6rem;left:.4rem;width:.45rem;height:.45rem;background:#a3e635;border-radius:9999px}
+		</style>
+	</head>
+	<body class="bg-[#f9fcee] text-gray-900 font-sans">
+		 <!-- Header -->
+    <header class="bg-white shadow-sm py-4 px-6">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <button id="navbar-toggle" class="md:hidden flex items-center px-3 py-2 border rounded text-gray-800 border-gray-400 focus:outline-none mr-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <div class="flex items-center space-x-2">
+            <a href="/">
+                <img src="./images/AfriGulf.png" alt="AfriGulf Logo" class="w-20 h-15" />
+            </a>
+        </div>
+        <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-800" id="navbar-menu">
+          <a href="index.html" class="hover:text-emerald-600">Home</a>
+          <a href="services.html" class="hover:text-emerald-600 ">Service</a>
+          <a href="about.html" class="hover:text-emerald-600 text-emerald-600 font-bold">About</a>
+          <a href="contact.html" class="hover:text-emerald-600">Contact</a>
+        </nav>
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="contact.html" class="bg-emerald-50 text-emerald-600 px-5 py-2 rounded-full font-semibold text-sm hover:bg-emerald-100 transition">Get Started</a>
+        </div>
+      </div>
+    </header>
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="fixed inset-0 z-50 bg-black bg-opacity-60 hidden md:hidden">
+      <div class="bg-white w-64 h-full shadow-lg p-6 relative flex flex-col">
+        <button id="mobile-menu-close" class="absolute top-4 right-4 text-gray-800 text-2xl focus:outline-none">&times;</button>
+        <div class="mb-8 flex items-center space-x-2">
+          <img src="./images/AfriGulf.png" alt="AfriGulf Logo" class="w-20 h-15" />
+        </div>
+        <a href="index.html" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">Home</a>
+        <a href="services.html" class="py-2 px-2 rounded hover:bg-lime-100 text-emerald-600 font-bold">Service</a>
+        <a href="about.html" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">About</a>
+        <a href="contact.html" class="py-2 px-2 rounded hover:bg-lime-100 text-gray-800 font-medium">Contact</a>
+        <a href="contact.html" class="mt-6 bg-emerald-50 text-emerald-600 px-5 py-2 rounded-full font-semibold text-sm hover:bg-emerald-100 transition text-center">Get Started</a>
+      </div>
+    </nav>
+		<!-- Hero / Intro -->
+		<section class="relative overflow-hidden bg-gradient-to-br from-lime-100 via-emerald-50 to-white px-6 py-24">
+			<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+				<div>
+					<span class="inline-flex items-center gap-2 bg-lime-200 text-black text-xs font-semibold px-3 py-1 rounded mb-4">Who We Are</span>
+					<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Connecting Africa & the GCC Through Opportunity</h1>
+					<p class="text-gray-700 mb-6">AfriGulf is dedicated to building sustainable economic and cultural bridges between Africa and the Gulf Cooperation Council (GCC) with a special focus on Qatar. Inspired by Qatar's National Vision 2030 and Africa's Agenda 2063, we enable growth through innovation, partnership, and strategic facilitation.</p>
+					<div class="flex flex-wrap gap-4">
+						<a href="services.html" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition text-sm">Our Services</a>
+						<a href="#mission" class="flex items-center gap-2 group text-sm font-medium">
+							<div class="bg-lime-200 p-3 rounded-full animate-pulse-icon">
+                <svg class="w-4 h-4 fill-black" viewBox="0 0 20 20">
+                  <path d="M6 4l10 6-10 6z" />
+                </svg>
+              </div>
+							<span class="group-hover:underline">Mission & Vision</span>
+						</a>
+					</div>
+				</div>
+				<div class="relative">
+      <div class="grid grid-cols-2 gap-4">
+        <!-- Top images with equal height -->
+        <img src="./images/about4.png" alt="Img2" class="rounded-lg w-full h-40 object-cover" />
+        <img src="./images/about1.png" alt="Img1" class="rounded-lg w-full h-40 object-cover" />
+        <!-- Bottom wide image -->
+        <img src="./images/about2.png" alt="Img3" class="rounded-lg w-full h-48 object-cover col-span-2" />
+      </div>
+
+      <!-- Experience Badge -->
+      <div class="absolute bottom-40 left-1/2 transform -translate-x-1/2 bg-lime-400 text-white font-bold text-center px-6 py-6 rounded-full w-32 h-32 flex flex-col items-center justify-center shadow-xl text-sm">
+        <span class="text-2xl">15+</span>
+        <span>Years Of</span>
+        <span>Experiences</span>
+      </div>
+    </div>
+			</div>
+			<div class="absolute inset-0 opacity-40 pointer-events-none" style="background-image:radial-gradient(circle at 30% 30%,#bef264,transparent 60%);"></div>
+		</section>
+		<!-- Mission / Vision / Values -->
+		<section id="mission" class="px-6 py-20 bg-white">
+			<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+				<div class="p-8 rounded-xl border border-lime-200 bg-lime-50/50 hover:shadow-lg transition">
+					<h3 class="text-xl font-bold mb-3">Our Mission</h3>
+					<p class="text-sm text-gray-700 leading-relaxed">To unlock economic and cultural opportunities by facilitating strategic partnerships, capacity building, and sustainable development between Africa and the GCC.</p>
+				</div>
+				<div class="p-8 rounded-xl border border-emerald-200 bg-emerald-50/50 hover:shadow-lg transition">
+					<h3 class="text-xl font-bold mb-3">Our Vision</h3>
+					<p class="text-sm text-gray-700 leading-relaxed">A thriving ecosystem where African and GCC stakeholders co-create innovations that drive inclusive growth and global impact.</p>
+				</div>
+				<div class="p-8 rounded-xl border border-gray-200 bg-gray-50 hover:shadow-lg transition">
+					<h3 class="text-xl font-bold mb-3">Our Values</h3>
+					<ul class="prose-list text-sm text-gray-700 leading-relaxed space-y-2">
+						<li>Integrity & Transparency</li>
+						<li>Sustainable Impact</li>
+						<li>Cross-Cultural Respect</li>
+						<li>Innovation & Learning</li>
+						<li>Collaborative Growth</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- Strategic Pillars -->
+		<section class="px-6 py-20 bg-[#111111] text-white">
+			<div class="max-w-6xl mx-auto">
+				<div class="text-center mb-14">
+					<p class="text-lime-400 text-sm font-semibold mb-2">Strategic Pillars</p>
+					<h2 class="text-3xl md:text-4xl font-bold">How We Create Value</h2>
+				</div>
+				<div class="grid md:grid-cols-4 gap-8">
+					<div class="p-6 border border-gray-700 rounded-xl hover:bg-lime-400 hover:text-black transition">
+						<h3 class="font-semibold mb-2">Capacity Building</h3>
+						<p class="text-xs text-gray-300 group-hover:text-black">High-impact training programs aligned with regional development agendas.</p>
+					</div>
+					<div class="p-6 border border-gray-700 rounded-xl hover:bg-lime-400 hover:text-black transition">
+						<h3 class="font-semibold mb-2">Market Access</h3>
+						<p class="text-xs text-gray-300 group-hover:text-black">Facilitating trade missions, investment dialogues, and B2B matchmaking.</p>
+					</div>
+						<div class="p-6 border border-gray-700 rounded-xl hover:bg-lime-400 hover:text-black transition">
+						<h3 class="font-semibold mb-2">Cultural Exchange</h3>
+						<p class="text-xs text-gray-300 group-hover:text-black">Tourism, events & youth programs promoting mutual understanding.</p>
+					</div>
+					<div class="p-6 border border-gray-700 rounded-xl hover:bg-lime-400 hover:text-black transition">
+						<h3 class="font-semibold mb-2">Innovation Support</h3>
+						<p class="text-xs text-gray-300 group-hover:text-black">Advisory and incubation pathways for startups & social enterprises.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Timeline / Journey -->
+		<section class="px-6 py-20 bg-white">
+			<div class="max-w-5xl mx-auto">
+				<div class="text-center mb-12">
+					<p class="text-lime-600 text-sm font-semibold mb-2">Our Journey</p>
+					<h2 class="text-3xl font-bold">Milestones That Define Us</h2>
+				</div>
+				<div class="relative border-l border-lime-300 ml-4 space-y-10">
+					<div class="pl-6 relative">
+						<span class="absolute -left-3 top-1 w-6 h-6 bg-lime-400 rounded-full border-4 border-white shadow"></span>
+						<h3 class="font-semibold">Foundation & Vision</h3>
+						<p class="text-sm text-gray-600 mt-1">Conceptualized to align Africa’s emerging potential with GCC strategic development goals.</p>
+					</div>
+					<div class="pl-6 relative">
+						<span class="absolute -left-3 top-1 w-6 h-6 bg-lime-400 rounded-full border-4 border-white shadow"></span>
+						<h3 class="font-semibold">Program Development</h3>
+						<p class="text-sm text-gray-600 mt-1">Designed modular corporate training & youth mobility frameworks.</p>
+					</div>
+					<div class="pl-6 relative">
+						<span class="absolute -left-3 top-1 w-6 h-6 bg-lime-400 rounded-full border-4 border-white shadow"></span>
+						<h3 class="font-semibold">Strategic Partnerships</h3>
+						<p class="text-sm text-gray-600 mt-1">Cultivated networks across education, tourism, and innovation ecosystems.</p>
+					</div>
+					<div class="pl-6 relative">
+						<span class="absolute -left-3 top-1 w-6 h-6 bg-lime-400 rounded-full border-4 border-white shadow"></span>
+						<h3 class="font-semibold">Scaling Impact</h3>
+						<p class="text-sm text-gray-600 mt-1">Expanding outreach, digital capabilities, and cross-border collaborations.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Team Snapshot (placeholder) -->
+		<!-- <section class="px-6 py-20 bg-[#f1f5f9]">
+			<div class="max-w-6xl mx-auto">
+				<div class="text-center mb-12">
+					<p class="text-lime-600 text-sm font-semibold mb-2">Our People</p>
+					<h2 class="text-3xl font-bold">Leadership & Network</h2>
+					<p class="text-gray-600 max-w-2xl mx-auto mt-3 text-sm">We collaborate with a distributed network of trainers, advisors, and sector specialists across Africa & the GCC. (Team profiles coming soon.)</p>
+				</div>
+				<div class="grid md:grid-cols-3 gap-8">
+					<div class="bg-white p-6 rounded-xl shadow border border-gray-100 flex flex-col items-center text-center">
+						<div class="w-24 h-24 rounded-full bg-gradient-to-br from-lime-200 to-emerald-100 flex items-center justify-center text-lime-700 font-bold text-xl mb-4">AG</div>
+						<h3 class="font-semibold">Advisory Network</h3>
+						<p class="text-xs text-gray-600 mt-2">Policy, education & innovation specialists guiding strategic direction.</p>
+					</div>
+					<div class="bg-white p-6 rounded-xl shadow border border-gray-100 flex flex-col items-center text-center">
+						<div class="w-24 h-24 rounded-full bg-gradient-to-br from-lime-200 to-emerald-100 flex items-center justify-center text-lime-700 font-bold text-xl mb-4">CX</div>
+						<h3 class="font-semibold">Program Leads</h3>
+						<p class="text-xs text-gray-600 mt-2">Designing & executing training, mobility & facilitation initiatives.</p>
+					</div>
+					<div class="bg-white p-6 rounded-xl shadow border border-gray-100 flex flex-col items-center text-center">
+						<div class="w-24 h-24 rounded-full bg-gradient-to-br from-lime-200 to-emerald-100 flex items-center justify-center text-lime-700 font-bold text-xl mb-4">GT</div>
+						<h3 class="font-semibold">Growth & Impact</h3>
+						<p class="text-xs text-gray-600 mt-2">Measuring outcomes & scaling partnerships sustainably.</p>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<!-- Call To Action -->
+		<section class="relative bg-cover bg-center bg-no-repeat" style="background-image:url('./images/cta-img.png')">
+			<div class="absolute inset-0 bg-black/60"></div>
+			<div class="relative z-10 max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 items-center">
+				<div>
+					<span class="inline-block bg-lime-400 text-black text-xs font-semibold px-3 py-1 rounded mb-4">Partner With Us</span>
+					<h2 class="text-4xl font-bold text-white leading-tight mb-4">Ready To Build Cross-Regional Impact?</h2>
+					<p class="text-gray-300 text-sm max-w-md">Join us in cultivating sustainable growth, knowledge exchange, and innovation between Africa & the GCC.</p>
+				</div>
+				<div class="mt-8 md:mt-0 md:text-right">
+					<a href="services.html" class="inline-block bg-lime-400 text-black font-semibold px-8 py-4 rounded shadow hover:bg-lime-300 transition">Explore Services →</a>
+				</div>
+			</div>
+		</section>
+		<!-- Contact Anchor -->
+		<section id="contact" class="bg-[#f1f1f1] text-black py-16 px-6">
+			<div class="max-w-4xl mx-auto text-center">
+				<h2 class="text-4xl font-bold mb-4">Get In Touch.</h2>
+				<p class="text-gray-900 mb-4">Reach out to learn more about partnerships, programs, or advisory support.</p>
+				<p class="text-gray-900 mb-10">Email us at <a href="mailto:info@afri-gulf.com" class="text-lime-500 hover:underline">info@afri-gulf.com</a></p>
+			</div>
+			<form class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div>
+					<label class="block text-sm font-medium text-gray-900 mb-1">First Name</label>
+					<input type="text" placeholder="Enter your first name..." class="w-full px-4 py-2 rounded-md text-black border border-gray-300 focus:ring-lime-300 focus:outline-none" />
+				</div>
+				<div>
+					<label class="block text-sm font-medium text-gray-900 mb-1">Last Name</label>
+					<input type="text" placeholder="Enter your last name..." class="w-full px-4 py-2 rounded-md text-black border border-gray-300 focus:ring-lime-300 focus:outline-none" />
+				</div>
+				<div class="md:col-span-2">
+					<label class="block text-sm font-medium text-gray-900 mb-1">Email Address</label>
+					<input type="email" placeholder="Enter your email address..." class="w-full px-4 py-2 rounded-md text-black border border-gray-300 focus:ring-lime-300 focus:outline-none" />
+				</div>
+				<div class="md:col-span-2">
+					<label class="block text-sm font-medium text-gray-900 mb-1">Message</label>
+					<textarea placeholder="Enter your message..." maxlength="400" rows="5" class="w-full px-4 py-2 rounded-md text-black border border-gray-300 focus:ring-lime-300 focus:outline-none"></textarea>
+					<p class="text-right text-xs text-gray-400 mt-1">Max 400 characters</p>
+				</div>
+				<div class="md:col-span-2 text-center">
+					<button type="submit" class="bg-lime-300 text-black font-semibold px-8 py-3 rounded-md hover:bg-lime-200 transition duration-200">Send Message →</button>
+				</div>
+			</form>
+		</section>
+		<!-- FOOTER -->
+ <footer class="bg-gray-900 text-white pt-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <!-- Quote Bar -->
+    <div class="flex flex-col md:flex-row md:justify-between md:items-center bg-black text-white px-8 py-8 rounded-t-md text-center md:text-left">
+      <div class="mb-6 md:mb-0">
+        <h3 class="text-2xl font-bold">Get Free Quote</h3>
+        <p class="text-sm text-gray-300">Best solutions for your company</p>
+      </div>
+      <form class="flex w-full md:w-auto justify-center md:justify-end mt-2 md:mt-0">
+        <input type="email" placeholder="Email Address"
+          class="px-4 py-2 text-sm rounded-l-md w-full md:w-64 text-black outline-none" />
+        <button class="bg-lime-300 text-black font-semibold px-4 py-2 rounded-r-md hover:bg-lime-200">
+          Get A Quote
+        </button>
+      </form>
+    </div>
+
+    <!-- Footer Content Grid -->
+    <div class="grid md:grid-cols-5 gap-10 py-14 text-sm text-center justify-items-center">
+      <!-- Logo & Contact -->
+      <div class="flex flex-col items-center">
+        <img src="./images/afrigulf-.png" alt="Logo" class="mb-4 w-20 mx-auto md:mx-0" />
+        <p class="mb-2 max-w-xs md:max-w-none">Need any support? or have any project on your mind?</p>
+        <div class="flex items-center gap-2 mb-1 justify-center">
+          <i class="fa fa-map-marker w-4 h-4 mt-1"></i>
+          <span>First floor, Office No. 102, Building 69, B-Ring Road, Doha, Qatar</span>
+        </div>
+        <div class="flex items-center gap-2 mb-1 justify-center">
+          <i class="fa fa-envelope w-4 h-4"></i>
+          <span>info@afri-gulf.com</span>
+        </div>
+        <div class="flex items-center gap-2 justify-center">
+          <i class="fa fa-phone w-4 h-4"></i>
+          <span>(+974) 3003 5911</span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="flex flex-col items-center">
+						<h4 class="font-bold mb-4">Quick Links</h4>
+						<ul class="space-y-2">
+							<li><a href="index.html" class="hover:underline">Home</a></li>
+							<li><a href="services.html" class="hover:underline">Service</a></li>
+							<li><a href="about.html" class="hover:underline">About</a></li>
+							<li><a href="contact.html" class="hover:underline">Contact</a></li>
+						</ul>
+					</div>
+
+      <!-- Services -->
+      <div class="flex flex-col items-center">
+        <h4 class="font-bold mb-4">Our Services</h4>
+        <ul class="space-y-2">
+          <li>Corporate Training</li>
+          <li>Tourism Development</li>
+          <li>Business Facilitation</li>
+							<li>Student Tourism</li>
+							<li>Sports Tourism</li>
+							<li>Events Management</li>
+						</ul>
+					</div>
+
+      <!-- Latest News -->
+      <div class="md:col-span-2 flex flex-col items-center">
+						<h4 class="font-bold mb-4">Latest News</h4>
+						<div class="space-y-4 max-w-md md:max-w-none">
+							<p class="text-gray-400">Updates & insights coming soon.</p>
+						</div>
+					</div>
+    </div>
+  </div>
+</footer>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				var navbarToggle = document.querySelector('#navbar-toggle');
+				var mobileMenu = document.querySelector('#mobile-menu');
+				var mobileMenuClose = document.querySelector('#mobile-menu-close');
+				if (navbarToggle && mobileMenu && mobileMenuClose) {
+					navbarToggle.addEventListener('click', function (e) { e.preventDefault(); mobileMenu.classList.remove('hidden'); });
+					mobileMenuClose.addEventListener('click', function (e) { e.preventDefault(); mobileMenu.classList.add('hidden'); });
+					mobileMenu.addEventListener('click', function (e) { if (e.target === mobileMenu) { mobileMenu.classList.add('hidden'); } });
+				}
+			});
+		</script>
+	</body>
+</html>
